@@ -4,7 +4,6 @@ import hiber.config.AppConfig;
 import hiber.model.Car;
 import hiber.model.User;
 import hiber.service.UserService;
-import org.hibernate.query.Query;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.sql.SQLException;
@@ -32,11 +31,8 @@ public class MainApp {
          System.out.println();
       }
 
-      User user1 = userService.userByCar("LADA",99);
-      System.out.println(user1.getEmail());
-      User user2 = userService.userByCar("subaru",10);
-      System.out.println(user2.getEmail());
-
+      User user = userService.userByCar("LADA",99);
+      System.out.println(user.getEmail());
 
       context.close();
    }
