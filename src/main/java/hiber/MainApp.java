@@ -32,8 +32,11 @@ public class MainApp {
          System.out.println();
       }
 
-      User user = userService.userByCar("LADA",99);
-      System.out.println(user.getEmail());
+      User user1 = userService.userByCar("LADA",99);
+      System.out.println(user1.getEmail());
+      User user2 = userService.userByCar("subaru",10);
+      System.out.println(user2.getEmail());
+
 
       context.close();
    }
